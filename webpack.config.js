@@ -18,6 +18,14 @@ module.exports = {
         /*输出文件名*/
         filename: 'bundle.js'
     },
+    devServer: {
+        open:true,
+        host:'localhost' || baseDevServer.host,
+        port: 9090,
+        static: {
+            directory: path.join(__dirname, './index.html')
+        },
+    },
     plugins: [htmlPlugin], // 通过plugins节点，使htmlPlugin插件生效
    
 };
